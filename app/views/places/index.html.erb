@@ -5,4 +5,16 @@
     <p><%= place.description %></p><br>
   </div>
 
+
 <% end %>
+
+<br>
+<br>
+<div class="pagination">
+  <div class="page_info">
+    <%= page_entries_info @places %>
+  </div>
+  <br>
+  <%= will_paginate @places, previous_label: "<", next_label: ">", :container => false %>
+</div>
+

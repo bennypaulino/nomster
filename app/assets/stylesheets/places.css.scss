@@ -1,3 +1,50 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// ----------------pagination
+
+.pagination:before,
+.pagination:after {
+  content: " ";
+  display: block;
+}
+
+.pagination:after {
+  clear: both;
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.pagination a, .previous_page, .current, .next_page {
+  padding: .75em 1em;
+  margin: 0 .5em;
+  border-radius: .15em;
+  line-height: 20px;
+  text-decoration: none;
+  background: #fff;
+  font-size: .7em;
+  font-weight: 700;
+  font-style: normal;
+  color: #A4A4A4;
+}
+.current {
+  background: #7edce3;
+  color: #fff;
+}
+.disabled {
+  display: none;
+} 
+.pagination a:hover {
+  background: #d6d6d6;
+  color: #fff;
+}
+
+.pagination a:hover {
+  color: #28C6D1;
+  transition: 1s;
+}

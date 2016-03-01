@@ -33,6 +33,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Provides a simple API for performing paginated queries with Active Record, DataMapper and Sequel, and includes
+# helpers for rendering pagination links in Rails, Sinatra and Merb web apps.
+gem 'will_paginate', '~> 3.1'
+
 gem 'rails_12factor', group: :production
 
 group :doc do
