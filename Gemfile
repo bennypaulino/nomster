@@ -43,6 +43,13 @@ gem 'jbuilder', '~> 1.2'
 # helpers for rendering pagination links in Rails, Sinatra and Merb web apps.
 gem 'will_paginate', '~> 3.1'
 
+# Adds geocoding (by street or IP address), reverse geocoding (finding street address based on given coordinates), 
+# and distance queries.
+gem 'geocoder'
+
+# Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '>= 1.0.0'
+
 
 gem 'rails_12factor', group: :production
 
