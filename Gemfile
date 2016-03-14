@@ -50,6 +50,8 @@ gem 'geocoder'
 # Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem 'figaro', '>= 1.0.0'
 
+# provides a simple and extremely flexible way to upload files from Ruby applications
+gem 'carrierwave'
 
 gem 'rails_12factor', group: :production
 
