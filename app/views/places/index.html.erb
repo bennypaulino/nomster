@@ -8,6 +8,12 @@
       <small><%= place.user.email %></small>
     <% end %>
 
+  <% if place.photos.present? && place.photos.last.picture.present? %>
+      <div class="col-xs-12 col-sm-6">
+        <%= image_tag place.photos.last.picture, class: "img-responsive" %>
+      </div>
+  <% end %>
+
   <% if place.comments.present? %>
     <div class="col-xs-12">
       <blockquote>
