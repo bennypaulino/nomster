@@ -53,6 +53,9 @@ gem 'figaro', '>= 1.0.0'
 # provides a simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave'
 
+# Allows carrierwave to be able to communicate with Amazon S3
+gem 'fog', '~> 1.3.1'
+
 gem 'rails_12factor', group: :production
 
 group :doc do
