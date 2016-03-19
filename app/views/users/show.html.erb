@@ -1,8 +1,10 @@
 <div class="booyah-box">
-  <div class="col-xs-4">
+  <div class="col-xs-2">
     <%= image_tag 'user4.png', class: 'avatar' %>
   </div>
-  <div class="col-xs-8">
+  <div class="col-xs-2">
+  </div>
+  <div class="col-xs-6 pull-left">
     <h1><%= @user.username %></h1>
     <h2><%= @user.email %></h2>
     <h3>Member Since: <%= @user.created_at.strftime("%B %d, %Y") %></h3>
@@ -31,4 +33,40 @@
       </blockquote>
   </div>
 <% end %>
-  
+
+<div class="clear"></div>
+<br>
+<br>
+<h2 class="text-center">My Places</h2>
+<br>
+<br>
+<% @user.places.each do | place | %>
+  <div class="booyah-box col-xs-10 col-xs-offset-1">
+    <h1><%= link_to place.name, place_path(place) %></h1><br>
+    <i><%= place.address %></i><br><br>
+    <p><%= place.description %></p><br>
+
+    <% if place.user.present? %>
+      <small><%= place.user.username %></small>
+    <% end %>
+
+    <% if place.photos.present? && place.photos.last.picture.present? %>
+        <div class="col-xs-12 col-sm-6">
+          <%= image_tag place.photos.last.picture, class: "img-responsive" %>
+        </div>
+    <% end %>
+
+    <% if place.comments.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <small><%= place.comments.last.user.username %></small>
+        </blockquote>
+      </div>
+    <% end %>
+
+  </div>
+<% end %>

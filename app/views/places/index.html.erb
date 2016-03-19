@@ -67,7 +67,7 @@
     <p><%= place.description %></p><br>
 
     <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+      <small><%= place.user.username %></small>
     <% end %>
 
   <% if place.photos.present? && place.photos.last.picture.present? %>
@@ -83,7 +83,7 @@
           <b><%= place.comments.last.humanized_rating %></b> -
         <% end %>
         <%= place.comments.last.message %>
-        <small><%= place.comments.last.user.email %></small>
+        <small><%= place.comments.last.user.username %></small>
       </blockquote>
     </div>
   <% end %>
