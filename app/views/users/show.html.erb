@@ -1,6 +1,6 @@
 <div class="booyah-box">
   <div class="col-xs-4">
-    <%= image_tag 'user4.png' %>
+    <%= image_tag 'user4.png', class: 'avatar' %>
   </div>
   <div class="col-xs-8">
     <h1><%= @user.username %></h1>
@@ -11,3 +11,24 @@
   </div>
   <div class="clear"></div>
 </div>
+
+<br>
+<br>
+<h1 class="text-center">My Comments</h1>
+<br>
+<br>
+<% @user.comments.each do |comment| %>
+  <div class="col-xs-12 col-sm-6">
+    <h2 class="text-center">
+      <%= link_to comment.place.name, place_path(comment.place) %>
+    </h2>
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <small><%= comment.user.username %></small>
+      </blockquote>
+  </div>
+<% end %>
+  
