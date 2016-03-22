@@ -67,26 +67,26 @@
     <p><%= place.description %></p><br>
 
     <% if place.user.present? %>
-      <small><%= place.user.username %></small>
+      <p><small>submitted by - <%= place.user.username %></small></p>
     <% end %>
 
-  <% if place.photos.present? && place.photos.last.picture.present? %>
-      <div class="col-xs-12 col-sm-6">
-        <%= image_tag place.photos.last.picture, class: "img-responsive" %>
-      </div>
-  <% end %>
+    <% if place.photos.present? && place.photos.last.picture.present? %>
+        <div class="col-xs-12 col-sm-6">
+          <%= image_tag place.photos.last.picture, class: "img-responsive" %>
+        </div>
+    <% end %>
 
-  <% if place.comments.present? %>
-    <div class="col-xs-12">
-      <blockquote>
-        <% if place.comments.last.humanized_rating.present? %>
-          <b><%= place.comments.last.humanized_rating %></b> -
-        <% end %>
-        <%= place.comments.last.message %>
-        <small><%= place.comments.last.user.username %></small>
-      </blockquote>
-    </div>
-  <% end %>
+    <% if place.comments.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <% if place.comments.last.humanized_rating.present? %>
+            <b><%= place.comments.last.humanized_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <small><%= place.comments.last.user.username %></small>
+        </blockquote>
+      </div>
+    <% end %>
 
   </div>
 <% end %>

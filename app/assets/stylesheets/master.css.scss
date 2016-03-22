@@ -47,6 +47,11 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+p small {
+  font-style: italic;
+  margin-left: 2em;
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
