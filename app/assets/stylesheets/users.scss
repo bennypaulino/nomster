@@ -4,4 +4,44 @@
 
 .avatar {
   opacity: 0.5;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.edit {
+  word-spacing: .1em;
+  margin-left: 5px;
+}
+
+.userStats {
+  margin-right: 16em;
+  margin-top: 1em;
+}
+
+.userStats h1 {
+  font-family: 'okolaksregular', sans-serif;
+  font-size: 2.6em;
+  font-weight: 600;
+  letter-spacing: .2em;
+  color: #23B1BB;
+  text-shadow: rgba(0,0,0,0.30) 1px 1px;
+  margin-bottom: .1em;
+}
+
+.userStats h2 {
+  font-size: 1.6em;
+  color: #75847e;
+  margin-bottom: .1em;
+}
+
+.userStats h3 {
+  font-size: 1.4em;
+  color: #505a56;
+  word-spacing: .1em;
+  margin-bottom: .2em;
+  font-style: italic;
+}
+
+.userStats h4 {
+  margin-bottom: .3em;
 }
